@@ -4,7 +4,7 @@ user_location = gets.chomp
 
 p user_location
 
-gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{ user_location }&key=AIzaSyB92cYxPcYqgjwBJfWlwDQw_7yjuyU3tpA"
+gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{ user_location }&key=#{ENV.fetch("GMAPS_TOKEN")}"
 
 p gmaps_url
 
